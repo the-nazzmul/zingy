@@ -22,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${alpino.variable} font-sans antialiased`}>
+      <body
+        className={`${alpino.variable} overflow-x-hidden bg-yellow-300 font-sans antialiased`}
+      >
         <Header />
         <main>{children}</main>
       </body>
