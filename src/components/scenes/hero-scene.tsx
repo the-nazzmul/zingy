@@ -11,7 +11,7 @@ import { useStore } from "@/hooks/useStore";
 
 gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
-const Scene = () => {
+const HeroScene = () => {
   const isReady = useStore((state) => state.isReady);
 
   const can1Ref = useRef<Group>(null);
@@ -133,4 +133,4 @@ const Scene = () => {
   );
 };
 
-export default Scene;
+export default HeroScene;
