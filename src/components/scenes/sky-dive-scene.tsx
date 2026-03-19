@@ -117,7 +117,24 @@ const SkyDiveScene = ({ sentence, flavor }: SkyDiveSceneProps) => {
         y: 0,
         duration: 0.3,
         ease: "back.out(1.7)",
-      });
+      })
+      .to(
+        wordsRef.current.children.map((word) => word.position),
+        {
+          keyframes: [
+            { x: 0, y: 0, z: -1 },
+            { ...getXYPositions(-7), z: -7 },
+          ],
+          stagger: 0.3,
+        },
+        0,
+      )
+      .to(canRef.current.position, {
+        ...getXYPositions(4),
+        duration: 0.5,
+        ease: "back.in(1.7)",
+      })
+      .to(cloudGroupRef.current.position, { z: 7, duration: 0.5 });
   });
 
   return (
@@ -129,13 +146,15 @@ const SkyDiveScene = ({ sentence, flavor }: SkyDiveSceneProps) => {
           rotationIntensity={0}
           floatIntensity={3}
           floatSpeed={3}
-        ></FloatingCan>
+        >
+          <pointLight intensity={30} color="#8C0413" decay={0.6} />
+        </FloatingCan>
       </group>
 
       {/* clouds */}
       <Clouds ref={cloudGroupRef}>
-        <Cloud ref={cloud1Ref} bounds={[10, 10, 2]} color="#4B6070" />
-        <Cloud ref={cloud2Ref} bounds={[10, 10, 2]} color="#4B6070" />
+        <Cloud ref={cloud1Ref} bounds={[10, 10, 2]} color="#5B7082" />
+        <Cloud ref={cloud2Ref} bounds={[10, 10, 2]} color="#5B7082" />
       </Clouds>
 
       {/* texts */}
