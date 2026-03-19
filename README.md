@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zingy
+
+A modern, scroll-driven product landing page for Zingy soda, built with Next.js, React Three Fiber, Drei, and GSAP.
+
+**Live Site:** [zingy-drink.vercel.app](https://zingy-drink.vercel.app/)  
+**Tech Stack:** Next.js 16, React 19, TypeScript, Tailwind CSS 4, GSAP, Three.js, React Three Fiber, Drei
+
+---
+
+## Preview
+
+![Zingy Hero Preview](public/thumbnails/hero.png)
+
+---
+
+## Highlights
+
+- Immersive 3D product storytelling using React Three Fiber and Drei
+- Scroll-driven timeline animations powered by GSAP and ScrollTrigger
+- Interactive hero and sky-dive sections with animated soda cans and cloud motion
+- Responsive layout with mobile and desktop-specific behavior
+- Component-driven architecture for scenes, sections, and reusable UI primitives
+- Type-safe codebase with TypeScript strict mode
+
+---
+
+## Core Features
+
+### Hero Experience
+
+- Animated heading reveal (`Live Gutsy`)
+- Multi-can 3D composition with motion choreography
+- Scroll-synced transitions and background color interpolation
+
+### Sky Dive Scene
+
+- Floating and rotating featured can
+- Procedural cloud movement and atmospheric lighting
+- Scroll-pinned section with timeline-based transforms
+
+### Performance and UX
+
+- Split section responsibility between 2D UI and 3D scene layers
+- Progressive scene readiness with shared state management
+- Clean animation orchestration through GSAP timelines
+
+---
+
+## Project Structure
+
+```txt
+src/
+  app/
+    page.tsx
+  components/
+    scenes/
+      hero-scene.tsx
+      sky-dive-scene.tsx
+    sections/
+      hero.tsx
+      sky-dive.tsx
+      header.tsx
+    bubbles.tsx
+    floating-can.tsx
+    soda-can.tsx
+    view-canvas.tsx
+  hooks/
+  lib/
+public/
+  thumbnails/
+    hero.png
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ (recommended)
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Available Scripts
 
-## Learn More
+- `npm run dev` - Start development server
+- `npm run build` - Create production build
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework:** Next.js (App Router)
+- **UI:** React, Tailwind CSS
+- **3D:** Three.js, `@react-three/fiber`, `@react-three/drei`
+- **Animation:** GSAP, ScrollTrigger, `@gsap/react`
+- **Language:** TypeScript
+- **State:** Zustand
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed on Vercel:
+
+- **Production URL:** [https://zingy-drink.vercel.app/](https://zingy-drink.vercel.app/)
+
+---
+
+## License
+
+This project is intended for portfolio and learning purposes unless stated otherwise by the repository owner.
