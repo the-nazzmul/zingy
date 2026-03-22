@@ -4,6 +4,7 @@ import "./globals.css";
 import { PageBodyBackground } from "@/components/page-body-background";
 import Header from "@/components/sections/header";
 import ViewCanvas from "@/components/view-canvas";
+import Footer from "@/components/sections/footer";
 
 const alpino = localFont({
   src: "../../public/fonts/Alpino-Variable.woff2",
@@ -31,6 +32,7 @@ export default function RootLayout({
           {children}
           <ViewCanvas />
         </main>
+        <Footer />
       </body>
     </html>
   );
