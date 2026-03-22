@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { PageBodyBackground } from "@/components/page-body-background";
 import Header from "@/components/sections/header";
 import ViewCanvas from "@/components/view-canvas";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${alpino.variable} font-sans antialiased`}>
       <body className={`overflow-x-hidden bg-yellow-300`}>
+        <PageBodyBackground />
         <Header />
         <main>
           {children}

@@ -106,12 +106,7 @@ const SkyDiveScene = ({ sentence, flavor }: SkyDiveSceneProps) => {
     });
 
     scrollTL
-      .to("body", {
-        backgroundColor: "#C0F0F5",
-        overwrite: "auto",
-        duration: 0.1,
-      })
-      .to(cloudGroupRef.current.position, { z: 0, duration: 0.3 }, 0)
+      .to(cloudGroupRef.current.position, { z: 0, duration: 0.3 })
       .to(canRef.current.position, {
         x: 0,
         y: 0,
