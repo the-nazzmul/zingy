@@ -26,7 +26,7 @@ const ogImagePath = "/zingy-image.png";
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: `${SITE_NAME} — Gut-friendly soda | Live gutsy`,
+    default: `${SITE_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
