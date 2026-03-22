@@ -6,7 +6,7 @@ import SkyDive from "@/components/sections/sky-dive";
 
 export default function Home() {
   return (
-    <section>
+    <section aria-label="Zingy product story">
       <Hero />
       <SkyDive />
       <Carousel />

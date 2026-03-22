@@ -104,9 +104,9 @@ const Hero = () => {
                 className="hero-header-word"
               />
             </h1>
-            <h3 className="hero-subheading mt-12 text-5xl font-semibold text-sky-950 lg:text-6xl">
+            <p className="hero-subheading mt-12 text-5xl font-semibold text-sky-950 lg:text-6xl">
               Soda Perfected
-            </h3>
+            </p>
             <p className="hero-body text-2xl font-normal text-sky-950">
               3-5g sugar. 9g fiber. 5 delicious flavors.
             </p>
