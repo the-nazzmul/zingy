@@ -1,5 +1,6 @@
 "use client";
 
+import ArrowButton from "@/components/arrow-button";
 import FloatingCan from "@/components/floating-can";
 import { FLAVORS } from "@/lib/constants";
 import { Center, Environment, View } from "@react-three/drei";
@@ -21,13 +22,12 @@ const Carousel = () => {
         Choose Your Flavor
       </h2>
       <div className="grid w-full grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 px-4 sm:gap-6 sm:px-6">
-        <button
-          type="button"
+        <ArrowButton
           onClick={() => changeFlavor(currentFlavorIndex + 1)}
-          className="justify-self-start px-3 py-1.5 text-white backdrop-blur-sm"
-        >
-          Left
-        </button>
+          direction="left"
+          label="Previous Flavor"
+        />
+
         <div className="flex min-w-0 justify-center">
           <View className="aspect-square h-[70vmin] min-h-40 w-[70vmin] max-w-full min-w-0">
             <Center position={[0, 0, 1.5]}>
@@ -45,13 +45,11 @@ const Carousel = () => {
             <directionalLight intensity={6} position={[0, 1, 1]} />
           </View>
         </div>
-        <button
-          type="button"
+        <ArrowButton
           onClick={() => changeFlavor(currentFlavorIndex - 1)}
-          className="justify-self-end px-3 py-1.5 text-white backdrop-blur-sm"
-        >
-          Right
-        </button>
+          direction="right"
+          label="Next Flavor"
+        />
       </div>
       <div className="text-area relative mx-auto text-center">
         <div className="text-wrapper text-4xl font-medium">
