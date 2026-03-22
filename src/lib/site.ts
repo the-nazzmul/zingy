@@ -11,11 +11,11 @@ export const SITE_DESCRIPTION =
   "Zingy is a gut-friendly soda with 3–5g sugar, 9g fiber, prebiotics, and probiotics in every can. Five bold flavors, real fruit juice, and no artificial sweeteners—refreshment that loves you back.";
 
 export function getSiteUrl(): URL {
+  const fromPublic = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  const vercel = process.env.VERCEL_URL?.trim();
   const raw =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_URL
-      ? `${process.env.VERCEL_URL}`
-      : "http://localhost:3000");
+    fromPublic ||
+    (vercel ? `https://${vercel.replace(/^https?:\/\//, "")}` : "http://localhost:3000");
   const trimmed = raw.replace(/\/$/, "");
   return new URL(trimmed);
 }
