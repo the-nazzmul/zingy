@@ -102,7 +102,6 @@ const SkyDiveScene = ({ sentence, flavor }: SkyDiveSceneProps) => {
         start: "top top",
         end: "+=2000",
         scrub: 1.5,
-        markers: true,
       },
     });
 
