@@ -5,6 +5,9 @@
   --font-mono: var(--font-geist-mono);
   --animate-slide-left: slide-left 3s linear infinite;
   --animate-spin-slow: spin 6s linear infinite;
+  --animate-zingy-fizz-dot: zingy-fizz-dot 0.85s ease-in-out infinite;
+  --animate-zingy-float-soft: zingy-float-soft 7s ease-in-out infinite;
+  --animate-zingy-float-slow: zingy-float-soft 11s ease-in-out infinite reverse;
 }
 
 @keyframes slide-left {
@@ -13,6 +16,28 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes zingy-fizz-dot {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(-7px);
+    opacity: 1;
+  }
+}
+
+@keyframes zingy-float-soft {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(12px, -18px) scale(1.06);
   }
 }
 

@@ -3,12 +3,7 @@
 import { View } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import dynamic from "next/dynamic";
-
-const Loader = dynamic(
-  () => import("@react-three/drei").then((mod) => mod.Loader),
-  { ssr: false },
-);
+import { ZingyCanvasLoader } from "@/components/zingy-canvas-loader";
 
 const ViewCanvas = () => {
   return (
@@ -34,7 +29,7 @@ const ViewCanvas = () => {
           <View.Port />
         </Suspense>
       </Canvas>
-      <Loader />
+      <ZingyCanvasLoader />
     </>
   );
 };
