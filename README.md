@@ -1,6 +1,6 @@
 # Zingy
 
-Marketing site for Zingy: a scroll-driven landing experience with 2D content and WebGL scenes (product hero, carousel, and narrative sections).
+Marketing site for Zingy: a scroll-driven landing experience with 3D content and WebGL scenes (product hero, carousel, and narrative sections).
 
 **Production:** [zingy-drink.vercel.app](https://zingy-drink.vercel.app/)
 
@@ -29,18 +29,18 @@ Application: [http://localhost:3000](http://localhost:3000)
 
 ### Scripts
 
-| Command        | Description              |
-| -------------- | ------------------------ |
-| `npm run dev`  | Development server       |
-| `npm run build` | Production build        |
-| `npm run start` | Production server       |
-| `npm run lint`  | ESLint                   |
+| Command         | Description        |
+| --------------- | ------------------ |
+| `npm run dev`   | Development server |
+| `npm run build` | Production build   |
+| `npm run start` | Production server  |
+| `npm run lint`  | ESLint             |
 
 ### Environment
 
-| Variable                 | Purpose |
-| ------------------------ | ------- |
-| `NEXT_PUBLIC_SITE_URL`   | Canonical origin for Open Graph, sitemap, `robots.txt`, and JSON-LD (e.g. `https://example.com`). On Vercel, `VERCEL_URL` is used if this is unset. |
+| Variable               | Purpose                                                                                                                                             |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin for Open Graph, sitemap, `robots.txt`, and JSON-LD (e.g. `https://example.com`). On Vercel, `VERCEL_URL` is used if this is unset. |
 
 ## Repository layout
 
